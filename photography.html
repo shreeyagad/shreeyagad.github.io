@@ -21,12 +21,20 @@
   <!-- Custom styles for this template -->
   <link href="css/clean-blog.min.css" rel="stylesheet">
 
+  <style>
+    .tabpanel-settings {
+      margin-bottom:30px;
+      padding-right: 15px;
+      padding-left:15px
+    }
+  </style>
+
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" aria-label="main-nav">
     <div class="container">
       <a class="navbar-brand" href="index.html">Shreeya Gad</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,9 +46,9 @@
           <li class="nav-item">
             <a class="nav-link" href="projects.html">Projects</a>
           </li>
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" href="photography.html">Photography</a>
-          </li> -->
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="resume.html">Resume</a>
           </li>
@@ -59,22 +67,56 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="page-heading">
-            <h1>Resume</h1>
+            <h1>Photography</h1>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Post Content -->
-  <div class="container" style="height: 800px">
-    <div class="row" style="height: 800px">
-      <iframe title="Resume" src="/shreeya_gad_resume.pdf" width="100%" height="100%"></iframe>
+  <div class="container">
+    <div class="row">
+      <div role="tabpanel" class="tabpanel-settings">
+        <div class="list-group" id="myList" role="tablist">
+          <a class="list-group-item list-group-item-action list-group-item-secondary active" data-bs-toggle="list" href="#London" role="tab">London</a>
+          <a class="list-group-item list-group-item-action list-group-item-secondary" data-bs-toggle="list" href="#NYC" role="tab">New York City</a>
+          <a class="list-group-item list-group-item-action list-group-item-secondary" data-bs-toggle="list" href="#India" role="tab">India</a>
+          <a class="list-group-item list-group-item-action list-group-item-secondary" data-bs-toggle="list" href="#Views" role="tab">Views</a>
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="tab-content" style="margin-bottom:20px">
+          <div class="tab-pane fade show active" id="London" role="tabpanel">        
+            <h2 id="London" class="section-heading" style="margin-top: 0px;">London</h2>
+            <h4 style="font-weight:lighter; margin-top:20px">June 2018</h4>
+          </div>
+          <div class="tab-pane fade" id="NYC" role="tabpanel">
+            <h2 id="NYC" class="section-heading" style="margin-top: 0px;">New York City</h2>
+            <h4 style="font-weight:lighter; margin-top:20px">Summer 2019</h4>
+          </div>
+          <div class="tab-pane fade" id="India" role="tabpanel">
+            <h2 id="India" class="section-heading" style="margin-top: 0px;">India</h2>
+            <h4 style="font-weight:lighter; margin-top:20px">January 2020</h4>
+          </div>
+          <div class="tab-pane fade" id="Views" role="tabpanel">
+            <h2 id="Views" class="section-heading" style="margin-top: 0px;">Views</h2>
+            <h4 style="font-weight:lighter; margin-top:20px">2019-2020</h4>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  
+
+  <script>
+      for (i = 0; i < 7; i++) {
+        document.write('<li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="${i}" class="active"></li>')
+      }
+  </script>
+
+  <hr>
+
   <!-- Footer -->
-  <footer style="padding-top: 50px; padding-bottom: 50px">
+  <footer style="padding-top: 35px; padding-bottom: 50px">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
@@ -116,6 +158,8 @@
   <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 </body>
 
 </html>
